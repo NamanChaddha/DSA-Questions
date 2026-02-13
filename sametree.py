@@ -11,4 +11,4 @@ class Solution:
             return 1==1
         elif p is None or q is None:
             return 1==0
-        return p.val==q.val and self.isSameTree(p.left,q.left) and self.isSameTree(p.right,q.right)
+        return p.val==q.val and self.isSameTree(p.left,q.left) and  self.isSameTree(p.right,q.right)
