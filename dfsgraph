@@ -1,0 +1,12 @@
+class Solution:
+    def dfsofgraph(self,v,adj,visited,result):
+        visited[v]=True
+        result.append(v)
+        for u in adj[v]:
+            if visited[u]==False:
+                self.dfsofgraph(u,adj,visited,result)
+    def dfs(self,adj):
+        visited=[False]*len(adj)
+        result=[]
+        self.dfsofgraph(0,adj,visited,result)
+        return result
