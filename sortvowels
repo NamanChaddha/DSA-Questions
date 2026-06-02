@@ -1,0 +1,21 @@
+class Solution:
+    def sortVowels(self, s: str) -> str:
+        qa=[]
+        ss=list(map(str,s))
+        x=0
+
+
+        for i in range(len(ss)):
+            if ss[i].lower()=='a' or ss[i].lower()=='e' or ss[i].lower()=='i' or ss[i].lower()=='o' or ss[i].lower()=='u':
+                ss[i]='-'
+                qa.append(s[i])
+            else:
+                ss[i]=s[i]
+        qa.sort()
+        for i in range(len(ss)):
+            if ss[i]=='-':
+                ss[i]=qa[x]
+                x+=1
+            else:
+                continue
+        return ''.join(ss)
