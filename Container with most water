@@ -5,7 +5,7 @@ class Solution:
         max1=0
         area=0
         while(i<j):
-            a=min(height[i],height[j])
+            a=min(height[i], height[j])
             width=j-i
             if height[i]<height[j]:
                 i+=1
