@@ -5,7 +5,7 @@ class Solution(object):
         s=1
         while n>i*c:
             n=n-i*c
-            i+=1
+            i+=1 
             c*=10
             s*=10
         number=s+(n-1)//i
