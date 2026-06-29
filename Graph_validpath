@@ -1,0 +1,25 @@
+lass Solution:
+    def validPath(self, n: int, edges: List[List[int]], source: int, destination: int) -> bool:
+        adj={}
+        for i in range(len(edges)):
+            if edges[i][0] in adj:
+                adj[edges[i][0]].append(edges[i][1])
+            else:
+                adj[edges[i][0]]=[edges[i][1]]
+            if edges[i][1] in adj:
+                adj[edges[i][1]].append(edges[i][0])
+            else:
+                adj[edges[i][1]]=[edges[i][0]]
+        print(adj)
+        visited=set()
+        arr=[]
+        def dfsrecursive(current):
+            if current==destination:
+                return 1==1
+            visited.add(current)
+            for u in adj[current]:
+                if u not in visited:
+                    if dfsrecursive(u):
+                        return 1==1
+            return 1==0
+        return dfsrecursive(source)
