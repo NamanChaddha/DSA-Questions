@@ -17,4 +17,4 @@ class Solution:
 		            arr2.append(-1)
 		    st.append(arr[i])
 	    return arr2[::-1]
-		        
+	#redused time complexity tpo o(n)(naman's way ))
